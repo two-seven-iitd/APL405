@@ -1,0 +1,130 @@
+Using device: cuda
+Beam type: simply_supported
+
+Data CSVs saved to results/simply_supported/data
+
+============================================================
+  Training Model A: Data-Only
+============================================================
+[Data-Only]  epoch    500  L_D=1.4187e-07  lr=1.00e-03
+[Data-Only]  epoch   1000  L_D=1.1026e-07  lr=1.00e-03
+[Data-Only]  epoch   1500  L_D=1.7209e-07  lr=1.00e-03
+[Data-Only]  epoch   2000  L_D=3.0322e-07  lr=1.00e-03
+[Data-Only]  epoch   2500  L_D=1.0465e-07  lr=1.00e-03
+[Data-Only]  epoch   3000  L_D=5.3345e-07  lr=1.00e-03
+[Data-Only]  epoch   3500  L_D=9.5467e-08  lr=1.00e-03
+[Data-Only]  epoch   4000  L_D=1.1772e-07  lr=1.00e-03
+[Data-Only]  epoch   4500  L_D=9.4975e-08  lr=1.00e-03
+[Data-Only]  epoch   5000  L_D=1.7033e-07  lr=1.00e-03
+[Data-Only]  epoch   5500  L_D=4.1154e-07  lr=1.00e-03
+[Data-Only]  epoch   6000  L_D=9.4053e-08  lr=1.00e-03
+[Data-Only]  epoch   6500  L_D=1.2730e-07  lr=1.00e-03
+[Data-Only]  epoch   7000  L_D=9.4121e-08  lr=1.00e-03
+[Data-Only]  epoch   7500  L_D=9.3090e-08  lr=1.00e-03
+[Data-Only]  epoch   8000  L_D=9.2894e-08  lr=1.00e-03
+[Data-Only]  epoch   8500  L_D=9.2670e-08  lr=1.00e-03
+[Data-Only]  epoch   9000  L_D=9.2629e-08  lr=1.00e-03
+[Data-Only]  epoch   9500  L_D=9.2390e-08  lr=1.00e-03
+[Data-Only]  epoch  10000  L_D=9.2398e-08  lr=1.00e-03
+[Data-Only]  epoch  10500  L_D=9.2122e-08  lr=1.00e-03
+[Data-Only]  epoch  11000  L_D=9.1858e-08  lr=1.00e-03
+[Data-Only]  epoch  11500  L_D=1.6167e-07  lr=1.00e-03
+[Data-Only]  epoch  12000  L_D=9.1448e-08  lr=1.00e-03
+[Data-Only]  epoch  12500  L_D=1.2519e-07  lr=1.00e-03
+[Data-Only]  epoch  13000  L_D=9.1004e-08  lr=1.00e-03
+[Data-Only]  epoch  13500  L_D=9.2092e-08  lr=1.00e-03
+[Data-Only]  epoch  14000  L_D=9.0540e-08  lr=1.00e-03
+[Data-Only]  epoch  14500  L_D=9.1401e-08  lr=1.00e-03
+[Data-Only]  epoch  15000  L_D=9.0115e-08  lr=1.00e-03
+
+============================================================
+  Training Model B: Physics-Only Mixed-PINN
+============================================================
+[Physics-Only]  epoch    500  total=1.4395e+03  L_Om=5.0784e+02  L_Up=5.6977e+02  L_Ga=3.6193e+00  lr=1.00e-03
+[Physics-Only]  epoch   1000  total=1.9702e+03  L_Om=9.0980e+01  L_Up=2.0649e+01  L_Ga=1.8586e+01  lr=1.00e-03
+[Physics-Only]  epoch   1500  total=1.0304e+03  L_Om=3.3964e+01  L_Up=4.6199e+01  L_Ga=9.5019e+00  lr=1.00e-03
+[Physics-Only]  epoch   2000  total=6.9369e+02  L_Om=1.8062e+01  L_Up=1.2659e+01  L_Ga=6.6297e+00  lr=1.00e-03
+[Physics-Only]  epoch   2500  total=1.2985e+03  L_Om=4.2885e+01  L_Up=8.4431e+00  L_Ga=1.2472e+01  lr=1.00e-03
+[Physics-Only]  epoch   3000  total=6.6138e+02  L_Om=6.7780e+01  L_Up=3.3267e+01  L_Ga=5.6033e+00  lr=1.00e-03
+[Physics-Only]  epoch   3500  total=4.0674e+02  L_Om=1.0344e+02  L_Up=7.6925e+00  L_Ga=2.9561e+00  lr=1.00e-03
+[Physics-Only]  epoch   4000  total=8.9903e+02  L_Om=3.6796e+01  L_Up=2.2890e+01  L_Ga=8.3934e+00  lr=1.00e-03
+[Physics-Only]  epoch   4500  total=8.4978e+01  L_Om=3.4729e+00  L_Up=5.7111e+00  L_Ga=7.5794e-01  lr=5.00e-04
+[Physics-Only]  epoch   5000  total=6.6509e+01  L_Om=2.5871e+00  L_Up=4.7712e+00  L_Ga=5.9151e-01  lr=5.00e-04
+[Physics-Only]  epoch   5500  total=7.1948e+01  L_Om=2.3496e+00  L_Up=4.8828e+00  L_Ga=6.4716e-01  lr=5.00e-04
+[Physics-Only]  epoch   6000  total=8.2179e+01  L_Om=2.6031e+00  L_Up=4.9012e+00  L_Ga=7.4675e-01  lr=5.00e-04
+[Physics-Only]  epoch   6500  total=5.0804e+01  L_Om=1.4795e+00  L_Up=2.9941e+00  L_Ga=4.6331e-01  lr=5.00e-04
+[Physics-Only]  epoch   7000  total=1.1533e+01  L_Om=7.1601e-01  L_Up=4.8846e-01  L_Ga=1.0328e-01  lr=2.50e-04
+[Physics-Only]  epoch   7500  total=1.2245e+01  L_Om=6.2187e-01  L_Up=4.8573e-01  L_Ga=1.1137e-01  lr=2.50e-04
+[Physics-Only]  epoch   8000  total=1.0036e+01  L_Om=5.1755e-01  L_Up=5.1931e-01  L_Ga=8.9993e-02  lr=2.50e-04
+[Physics-Only]  epoch   8500  total=5.9149e+00  L_Om=3.8621e-01  L_Up=3.1972e-01  L_Ga=5.2090e-02  lr=2.50e-04
+[Physics-Only]  epoch   9000  total=2.7788e+00  L_Om=2.8824e-01  L_Up=1.4857e-01  L_Ga=2.3420e-02  lr=1.25e-04
+[Physics-Only]  epoch   9500  total=2.3892e+00  L_Om=2.6693e-01  L_Up=1.2286e-01  L_Ga=1.9994e-02  lr=1.25e-04
+[Physics-Only]  epoch  10000  total=3.3959e+00  L_Om=4.7739e-01  L_Up=1.8238e-01  L_Ga=2.7361e-02  lr=1.25e-04
+[Physics-Only]  epoch  10500  total=3.0337e+00  L_Om=2.3178e-01  L_Up=1.5639e-01  L_Ga=2.6455e-02  lr=1.25e-04
+[Physics-Only]  epoch  11000  total=3.0097e+00  L_Om=2.1747e-01  L_Up=1.6156e-02  L_Ga=2.7761e-02  lr=6.25e-05
+[Physics-Only]  epoch  11500  total=1.3741e+00  L_Om=1.8065e-01  L_Up=1.7721e-02  L_Ga=1.1758e-02  lr=6.25e-05
+[Physics-Only]  epoch  12000  total=4.7811e+00  L_Om=2.4165e-01  L_Up=4.0353e-02  L_Ga=4.4991e-02  lr=6.25e-05
+[Physics-Only]  epoch  12500  total=2.1650e+00  L_Om=2.2972e-01  L_Up=4.6212e-02  L_Ga=1.8890e-02  lr=6.25e-05
+[Physics-Only]  epoch  13000  total=3.1162e-01  L_Om=1.4658e-01  L_Up=2.3884e-03  L_Ga=1.6265e-03  lr=3.13e-05
+[Physics-Only]  epoch  13500  total=2.2922e-01  L_Om=1.3906e-01  L_Up=1.4558e-03  L_Ga=8.8709e-04  lr=3.13e-05
+[Physics-Only]  epoch  14000  total=2.7011e-01  L_Om=1.3430e-01  L_Up=2.7195e-03  L_Ga=1.3309e-03  lr=3.13e-05
+[Physics-Only]  epoch  14500  total=2.9837e-01  L_Om=1.2885e-01  L_Up=6.2221e-03  L_Ga=1.6330e-03  lr=3.13e-05
+[Physics-Only]  epoch  15000  total=2.9337e-01  L_Om=1.2472e-01  L_Up=9.0116e-03  L_Ga=1.5964e-03  lr=3.13e-05
+
+============================================================
+  Training Model C: Hybrid Mixed-PINN
+============================================================
+[Hybrid]  epoch    500  total=4.7628e+04  L_Om=3.8023e+02  L_Up=1.4992e+03  L_Ga=4.5749e+02  L_D=1.2065e-03  lr=1.00e-03
+[Hybrid]  epoch   1000  total=2.8839e+04  L_Om=4.3626e+02  L_Up=8.8861e+02  L_Ga=2.7514e+02  L_D=1.5997e-03  lr=1.00e-03
+[Hybrid]  epoch   1500  total=1.9644e+04  L_Om=1.9624e+02  L_Up=2.1080e+02  L_Ga=1.9237e+02  L_D=1.4291e-04  lr=1.00e-03
+[Hybrid]  epoch   2000  total=1.3233e+04  L_Om=1.3012e+02  L_Up=8.6238e+01  L_Ga=1.3016e+02  L_D=1.1262e-04  lr=1.00e-03
+[Hybrid]  epoch   2500  total=9.5875e+03  L_Om=1.0143e+02  L_Up=6.2893e+01  L_Ga=9.4231e+01  L_D=1.0131e-04  lr=1.00e-03
+[Hybrid]  epoch   3000  total=7.2744e+02  L_Om=1.7574e+01  L_Up=9.6218e+00  L_Ga=7.0024e+00  L_D=9.3399e-05  lr=1.00e-03
+[Hybrid]  epoch   3500  total=1.5602e+03  L_Om=3.8942e+01  L_Up=1.6542e+01  L_Ga=1.5047e+01  L_D=1.0566e-04  lr=1.00e-03
+[Hybrid]  epoch   4000  total=1.4619e+03  L_Om=2.4077e+01  L_Up=1.7458e+01  L_Ga=1.4204e+01  L_D=1.1019e-04  lr=1.00e-03
+[Hybrid]  epoch   4500  total=5.3259e+02  L_Om=1.0352e+01  L_Up=8.4529e+00  L_Ga=5.1378e+00  L_D=1.2647e-04  lr=1.00e-03
+[Hybrid]  epoch   5000  total=3.6247e+02  L_Om=6.5193e+00  L_Up=4.9070e+00  L_Ga=3.5104e+00  L_D=1.0265e-04  lr=5.00e-04
+[Hybrid]  epoch   5500  total=5.7336e+01  L_Om=2.4052e+00  L_Up=2.8257e+00  L_Ga=5.2105e-01  L_D=1.0821e-04  lr=5.00e-04
+[Hybrid]  epoch   6000  total=3.1095e+01  L_Om=1.7749e+00  L_Up=2.1104e+00  L_Ga=2.7210e-01  L_D=1.1124e-04  lr=5.00e-04
+[Hybrid]  epoch   6500  total=3.0398e+02  L_Om=5.1888e+00  L_Up=4.7527e+00  L_Ga=2.9404e+00  L_D=1.1257e-04  lr=5.00e-04
+[Hybrid]  epoch   7000  total=3.8746e+01  L_Om=1.5421e+00  L_Up=1.6785e+00  L_Ga=3.5525e-01  L_D=1.0807e-04  lr=2.50e-04
+[Hybrid]  epoch   7500  total=1.8460e+01  L_Om=9.9160e-01  L_Up=1.1439e+00  L_Ga=1.6324e-01  L_D=9.2382e-05  lr=2.50e-04
+[Hybrid]  epoch   8000  total=9.5569e+01  L_Om=1.8480e+00  L_Up=2.4588e+00  L_Ga=9.1262e-01  L_D=7.8189e-05  lr=2.50e-04
+[Hybrid]  epoch   8500  total=3.1700e+01  L_Om=1.0262e+00  L_Up=1.1642e+00  L_Ga=2.9509e-01  L_D=6.4481e-05  lr=2.50e-04
+[Hybrid]  epoch   9000  total=4.6605e+01  L_Om=1.0317e+00  L_Up=8.4359e-01  L_Ga=4.4730e-01  L_D=5.9555e-05  lr=1.25e-04
+[Hybrid]  epoch   9500  total=4.0228e+01  L_Om=1.0071e+00  L_Up=8.0942e-01  L_Ga=3.8411e-01  L_D=4.8825e-05  lr=1.25e-04
+[Hybrid]  epoch  10000  total=4.1249e+00  L_Om=3.5035e-01  L_Up=4.1190e-01  L_Ga=3.3626e-02  L_D=3.3085e-05  lr=1.25e-04
+[Hybrid]  epoch  10500  total=4.2306e+00  L_Om=2.9123e-01  L_Up=3.1564e-01  L_Ga=3.6237e-02  L_D=1.7942e-05  lr=1.25e-04
+[Hybrid]  epoch  11000  total=1.2303e+00  L_Om=2.0841e-01  L_Up=1.9813e-01  L_Ga=8.2375e-03  L_D=8.9878e-06  lr=6.25e-05
+[Hybrid]  epoch  11500  total=1.2664e+00  L_Om=1.7602e-01  L_Up=1.4604e-01  L_Ga=9.4435e-03  L_D=3.8784e-06  lr=6.25e-05
+[Hybrid]  epoch  12000  total=1.3730e+00  L_Om=1.5186e-01  L_Up=1.0480e-01  L_Ga=1.1163e-02  L_D=8.2959e-07  lr=6.25e-05
+[Hybrid]  epoch  12500  total=1.4277e+00  L_Om=1.3210e-01  L_Up=8.5196e-02  L_Ga=1.2104e-02  L_D=9.3649e-08  lr=6.25e-05
+[Hybrid]  epoch  13000  total=3.0728e-01  L_Om=9.9167e-02  L_Up=3.2043e-02  L_Ga=1.7607e-03  L_D=4.6795e-07  lr=3.13e-05
+[Hybrid]  epoch  13500  total=2.8573e-01  L_Om=8.6194e-02  L_Up=2.1726e-02  L_Ga=1.7780e-03  L_D=9.9010e-07  lr=3.13e-05
+[Hybrid]  epoch  14000  total=2.6777e-01  L_Om=7.5874e-02  L_Up=1.5519e-02  L_Ga=1.7638e-03  L_D=1.2558e-06  lr=3.13e-05
+[Hybrid]  epoch  14500  total=2.4675e-01  L_Om=6.7412e-02  L_Up=1.1936e-02  L_Ga=1.6740e-03  L_D=1.2543e-06  lr=3.13e-05
+[Hybrid]  epoch  15000  total=1.7171e-01  L_Om=6.1123e-02  L_Up=6.3336e-03  L_Ga=1.0426e-03  L_D=1.0718e-06  lr=1.56e-05
+
+Model weights saved to results/simply_supported/models
+
+============================================================
+  Metrics
+============================================================
+=======================================================================
+  Beam type: SIMPLY_SUPPORTED
+=======================================================================
+
+Model                            MSE     Rel. L² Error     Max |Error|
+-----------------------------------------------------------------------
+Data-Only                 1.3574e-08        2.2062e-02      3.3268e-04
+Physics-Only              5.5918e-07        1.4160e-01      1.2947e-03
+Hybrid                    7.8420e-07        1.6769e-01      1.5370e-03
+=======================================================================
+
+Generating plots ...
+Saved: results/simply_supported/plots/deflection_comparison.png
+Saved: results/simply_supported/plots/moment_comparison.png
+Saved: results/simply_supported/plots/pointwise_error.png
+Saved: results/simply_supported/plots/convergence.png
+Saved: results/simply_supported/plots/individual_losses_hybrid.png
+Done.
