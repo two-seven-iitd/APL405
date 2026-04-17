@@ -91,7 +91,7 @@ def main():
     os.makedirs(models_dir, exist_ok=True)
     os.makedirs(data_dir, exist_ok=True)
 
-    tee = _Tee("terminal.log")
+    tee = _Tee(os.path.join("results", beam, "terminal.log"))
     sys.stdout = tee
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
