@@ -2,26 +2,19 @@
 
 import os
 import numpy as np
-import torch
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+from config import N_SENSORS, NOISE_PCT
 from data import (
-    get_eval_grid,
     get_sensor_data,
     analytical_w_cantilever,
     analytical_M_cantilever,
     analytical_w_simply_supported,
     analytical_M_simply_supported,
 )
-
-
-def _eval(net, device, n=1000):
-    x = get_eval_grid(n=n, device=device)
-    with torch.no_grad():
-        y = net(x).squeeze().cpu().numpy()
-    return y
+from evaluate import predict_w as _eval   # alias: plot.py historically used `_eval`
 
 
 def plot_deflection_comparison(
@@ -31,8 +24,8 @@ def plot_deflection_comparison(
     plots_dir: str,
     beam: str = "cantilever",
     device: str = "cpu",
-    n_sensors: int = 15,
-    noise_pct: float = 0.10,
+    n_sensors: int = N_SENSORS,
+    noise_pct: float = NOISE_PCT,
     fname: str = "deflection_comparison.png",
 ):
     """Plot 1: Deflection comparison across all three models."""

@@ -11,7 +11,6 @@ from plot import save_all_plots
 from data import (
     get_collocation_points,
     get_sensor_data,
-    get_eval_grid,
     analytical_w_cantilever,
     analytical_M_cantilever,
     analytical_w_simply_supported,
