@@ -64,9 +64,11 @@ def _rel_l2(net, w_true, device):
 
 
 def _seed_all(seed: int):
-    """Seed every RNG that affects training reproducibility."""
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)   # no-op on CPU, needed for GPU weight init
+    """Seed only the sensor-data RNG — leave torch weight init unseeded to
+    match main.py's training behavior (main.py never calls torch.manual_seed,
+    so Xavier init is drawn from the ambient torch RNG state). Seeding torch
+    here made Hybrid land in bad basins for seeds {42..46} that the LR
+    schedule couldn't escape in 15k epochs."""
     np.random.seed(seed)
 
 
