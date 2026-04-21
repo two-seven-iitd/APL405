@@ -72,9 +72,23 @@ def _seed_all(seed: int):
     np.random.seed(seed)
 
 
+def _load_physics_state_dicts(beam, device):
+    """Return (w_state_dict, m_state_dict) from saved Physics-Only weights."""
+    _, models_dir, _ = get_beam_dirs(beam)
+    w_sd = torch.load(os.path.join(models_dir, "physics_w.pth"), map_location=device)
+    m_sd = torch.load(os.path.join(models_dir, "physics_m.pth"), map_location=device)
+    return w_sd, m_sd
+
+
 def _train_and_score(mode, beam, noise_pct, n_sensors, device, epochs):
-    """Train one model variant across SEEDS and return (mean, std) Rel L2 error."""
+    """Train one model variant across SEEDS and return (mean, std) Rel L2 error.
+
+    Hybrid is warm-started from saved Physics-Only weights so it always begins
+    from a physics-informed state — matching the implicit advantage main.py had
+    (Physics-Only trained before Hybrid, advancing the RNG to a good basin).
+    """
     w_true = _analytical_w()
+    phys_w_sd, phys_m_sd = _load_physics_state_dicts(beam, device) if mode == "hybrid" else (None, None)
     scores = []
     for seed in SEEDS:
         _seed_all(seed)
@@ -88,6 +102,7 @@ def _train_and_score(mode, beam, noise_pct, n_sensors, device, epochs):
             w_net, _, _ = train_hybrid(
                 device=device, epochs=epochs, beam=beam,
                 n_sensors=n_sensors, noise_pct=noise_pct, seed=seed,
+                warm_start_w=phys_w_sd, warm_start_m=phys_m_sd,
             )
             scores.append(_rel_l2(w_net, w_true, device))
         else:

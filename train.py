@@ -111,8 +111,14 @@ def train_hybrid(
     n_sensors: int = N_SENSORS,
     noise_pct: float = NOISE_PCT,
     seed: int = 42,
+    warm_start_w=None,
+    warm_start_m=None,
 ):
-    """Model C: Hybrid Mixed-PINN — L_Ω + L_Υ + L_Γ + L_D."""
+    """Model C: Hybrid Mixed-PINN — L_Ω + L_Υ + L_Γ + L_D.
+
+    warm_start_w / warm_start_m: optional state dicts to initialise w_net and
+    m_net from saved Physics-Only weights instead of random Xavier init.
+    """
     lw = get_loss_weights(beam)
     lam_omega   = lw["lambda_omega"]
     lam_upsilon = lw["lambda_upsilon"]
@@ -121,6 +127,10 @@ def train_hybrid(
 
     w_net = WNet().to(device)
     m_net = MNet().to(device)
+    if warm_start_w is not None:
+        w_net.load_state_dict(warm_start_w)
+    if warm_start_m is not None:
+        m_net.load_state_dict(warm_start_m)
     all_params = list(w_net.parameters()) + list(m_net.parameters())
     optimizer = optim.Adam(all_params, lr=LR)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(
